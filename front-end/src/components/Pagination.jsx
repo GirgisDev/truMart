@@ -27,7 +27,7 @@ const PaginationNumber = styled.div`
   }
 `;
 
-const Pagination = ({ totalItems, itemsPerPage = 10 }) => {
+const Pagination = ({ totalItems, itemsPerPage = 10, paginateFN }) => {
   const [pageNumber, setPageNumber] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
   const [countList, setCountList] = useState([]);
@@ -59,6 +59,7 @@ const Pagination = ({ totalItems, itemsPerPage = 10 }) => {
   const paginate = number => {
     if (number === pageNumber) return;
     setPageNumber(number);
+    paginateFN(number)
     setPages();
   }
 

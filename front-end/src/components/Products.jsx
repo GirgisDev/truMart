@@ -4,6 +4,7 @@ import { connect } from "react-redux"
 import Departments from './Departments';
 import Product from './Product';
 import Pagination from './Pagination';
+import { getProducts } from '../actions/products.action';
 
 const ProductsContainer = styled.div`
   display: flex;
@@ -32,7 +33,11 @@ const ProductsList = styled.div`
   justify-content: space-around;
 `;
 
-const Products = ({ products }) => {
+const Products = ({ products, dispatch }) => {
+  const paginateProducts = pageNum => {
+    dispatch(getProducts(pageNum))
+  }
+
   return (
     <ProductsContainer>
       <ProductsCount>
@@ -50,7 +55,8 @@ const Products = ({ products }) => {
         </ProductsList>
       </ProductsListContainer>
       <Pagination
-        totalItems={products.length} />
+        totalItems={15}
+        paginateFN={paginateProducts} />
     </ProductsContainer>
   );
 }

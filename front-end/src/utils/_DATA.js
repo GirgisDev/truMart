@@ -119,6 +119,36 @@ const products = [
     discount: .1,
     image: "https://source.unsplash.com/200x200/daily/?product,watch",
   },
+  {
+    id: "f5ecd4b9-0557-42c0-942e-a85a6c59316b",
+    department_id: "14f7f80d-c9dd-4e57-a76b-b1cc3c704495",
+    name: "UHD curved TV",
+    price: 700,
+    promoCode: "JAN10",
+    promoActive: false,
+    discount: .1,
+    image: "https://source.unsplash.com/200x200/daily/?product,tv",
+  },
+  {
+    id: "f5ecd4b9-0557-42c0-942e-a85a6b59316c",
+    department_id: "14f7f80d-c9dd-4e57-a76b-b1cc3c704495",
+    name: "D-Link Router NA350C",
+    price: 89,
+    promoCode: "cyberm",
+    promoActive: true,
+    discount: .1,
+    image: "https://source.unsplash.com/200x200/daily/?product,router",
+  },
+  {
+    id: "f5acd4b8-0557-42c0-942e-a85a6b59314D",
+    department_id: "14f7f80d-c9dd-4e57-a76b-b1cc3c704495",
+    name: "External WD Hard disk",
+    price: 120,
+    promoCode: "cyberm",
+    promoActive: true,
+    discount: .1,
+    image: "https://source.unsplash.com/200x200/daily/?product,hdd",
+  },
 ];
 
 const departments = [
@@ -152,9 +182,12 @@ const departments = [
   },
 ]
 
-export function _getProducts () {
+export function _getProducts (pageNum) {
   return new Promise((res, rej) => {
-    setTimeout(() => res([...products]), 1000)
+    const startIndex = 12 * pageNum,
+      endIndex = startIndex + 12;
+    const slicedProducts = products.slice(startIndex, endIndex);
+    setTimeout(() => res(slicedProducts), 1000)
   })
 }
 export function _getDepartments () {

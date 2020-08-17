@@ -3,9 +3,9 @@ import { receiveProducts } from "./products.action";
 import { receiveDepartments } from "./departments.action";
 
 
-export function handleInitialData() {
+export function handleInitialData(pageNum) {
   return dispatch => {
-    return getInitialData().then(({products, departments}) => {
+    return getInitialData(pageNum).then(({products, departments}) => {
       dispatch(receiveProducts(products));
       dispatch(receiveDepartments(departments))
     })

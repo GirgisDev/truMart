@@ -8,7 +8,7 @@ import { handleInitialData } from './actions/shared.action';
 
 function App({ dispatch }) {
   useEffect(() => {
-    dispatch(handleInitialData());
+    dispatch(handleInitialData(0));
   });
 
   return (

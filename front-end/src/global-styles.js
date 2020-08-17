@@ -15,11 +15,40 @@ export const GlobalStyles = createGlobalStyle`
     text-rendering: optimizeLegibility;
   }
 
-  .separator {
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  ._separator {
     height: 1px;
     width: 100%;
     background-color: #DEDEDE;
     display: block;
     margin: 10px 0;
+  }
+  ._text-center {
+    text-align: center;
+  }
+  ._clearfix {
+    clear: both;
+  }
+
+  .badge {
+    padding: 4px 14px;
+    font-size: .7rem;
+    background-color: #DEDEDE;
+    margin-left: 5px;
+    margin-right: 15px;
+    border-radius: 15px;
+  }
+  .badge--blue {
+    background-color: #72c5ff;
+    color: #F3F3F3;
+  }
+  .badge--green {
+    background-color: #6bdf99;;
+    color: #F3F3F3;
   }
 `;

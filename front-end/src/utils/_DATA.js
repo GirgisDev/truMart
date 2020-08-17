@@ -7,7 +7,7 @@ const products = [
     promoCode: "JAN10",
     promoActive: true,
     discount: .1,
-    image: "https://i5.walmartimages.com/asr/07de2d93-505b-4902-8366-388a3f30e3b4.9375c5690645733ec080eef3f4895f7b.jpeg?odnWidth=408&odnHeight=408&odnBg=ffffff",
+    image: "https://source.unsplash.com/200x200/daily/?product,headphones",
   },
   {
     id: "f5ecd4b9-0557-42c0-942e-a85a6c59348a",
@@ -17,7 +17,7 @@ const products = [
     promoCode: "JAN10",
     promoActive: false,
     discount: .1,
-    image: "https://i5.walmartimages.com/asr/07de2d93-505b-4902-8366-388a3f30e3b4.9375c5690645733ec080eef3f4895f7b.jpeg?odnWidth=408&odnHeight=408&odnBg=ffffff",
+    image: "https://source.unsplash.com/200x200/daily/?product,tablet",
   },
   {
     id: "f5ecd4b9-0557-42c0-942e-a85a6c59349a",
@@ -27,7 +27,7 @@ const products = [
     promoCode: "JAN10",
     promoActive: false,
     discount: .1,
-    image: "https://i5.walmartimages.com/asr/07de2d93-505b-4902-8366-388a3f30e3b4.9375c5690645733ec080eef3f4895f7b.jpeg?odnWidth=408&odnHeight=408&odnBg=ffffff",
+    image: "https://source.unsplash.com/200x200/daily/?product,phone",
   },
   {
     id: "f5ecd4b9-0557-42c0-942e-a85a6c59347d",
@@ -37,7 +37,7 @@ const products = [
     promoCode: "JAN10",
     promoActive: true,
     discount: .1,
-    image: "https://i5.walmartimages.com/asr/07de2d93-505b-4902-8366-388a3f30e3b4.9375c5690645733ec080eef3f4895f7b.jpeg?odnWidth=408&odnHeight=408&odnBg=ffffff",
+    image: "https://source.unsplash.com/200x200/daily/?product,calculator",
   },
   {
     id: "f5ecd4b9-0557-42c0-942e-a85a6c593477",
@@ -47,7 +47,7 @@ const products = [
     promoCode: "JAN10",
     promoActive: false,
     discount: .1,
-    image: "https://i5.walmartimages.com/asr/07de2d93-505b-4902-8366-388a3f30e3b4.9375c5690645733ec080eef3f4895f7b.jpeg?odnWidth=408&odnHeight=408&odnBg=ffffff",
+    image: "https://source.unsplash.com/200x200/daily/?product,phone,apple",
   },
   {
     id: "f5ecd4b9-0557-42c0-942e-a85a6c59344f",
@@ -57,7 +57,7 @@ const products = [
     promoCode: "cyberm",
     promoActive: true,
     discount: .13,
-    image: "https://i5.walmartimages.com/asr/07de2d93-505b-4902-8366-388a3f30e3b4.9375c5690645733ec080eef3f4895f7b.jpeg?odnWidth=408&odnHeight=408&odnBg=ffffff",
+    image: "https://source.unsplash.com/200x200/daily/?product,chromebook",
   },
   {
     id: "f5ecd4b9-0557-42c0-942e-a85a6c59347e",
@@ -67,7 +67,7 @@ const products = [
     promoCode: "cyberm",
     promoActive: true,
     discount: .15,
-    image: "https://i5.walmartimages.com/asr/07de2d93-505b-4902-8366-388a3f30e3b4.9375c5690645733ec080eef3f4895f7b.jpeg?odnWidth=408&odnHeight=408&odnBg=ffffff",
+    image: "https://source.unsplash.com/200x200/daily/?product,laptop1",
   },
   {
     id: "f5ecd4b9-0557-42c0-942e-a85a6c59349b",
@@ -77,7 +77,7 @@ const products = [
     promoCode: "JAN10",
     promoActive: false,
     discount: .1,
-    image: "https://i5.walmartimages.com/asr/07de2d93-505b-4902-8366-388a3f30e3b4.9375c5690645733ec080eef3f4895f7b.jpeg?odnWidth=408&odnHeight=408&odnBg=ffffff",
+    image: "https://source.unsplash.com/200x200/daily/?product,backpack1",
   },
   {
     id: "f5ecd4b9-0557-42c0-942e-a85a6c59313d",
@@ -87,7 +87,7 @@ const products = [
     promoCode: "JAN10",
     promoActive: true,
     discount: .1,
-    image: "https://i5.walmartimages.com/asr/07de2d93-505b-4902-8366-388a3f30e3b4.9375c5690645733ec080eef3f4895f7b.jpeg?odnWidth=408&odnHeight=408&odnBg=ffffff",
+    image: "https://source.unsplash.com/200x200/daily/?product,backpack2",
   },
   {
     id: "f5ecd4b9-0557-42c0-942e-a85a6c59317f",
@@ -97,7 +97,27 @@ const products = [
     promoCode: "JAN10",
     promoActive: true,
     discount: .1,
-    image: "https://i5.walmartimages.com/asr/07de2d93-505b-4902-8366-388a3f30e3b4.9375c5690645733ec080eef3f4895f7b.jpeg?odnWidth=408&odnHeight=408&odnBg=ffffff",
+    image: "https://source.unsplash.com/200x200/daily/?product,laptop2",
+  },
+  {
+    id: "f5ecd4b9-0557-42c0-942e-a85a6c59324d",
+    department_id: "14f7f80d-c9dd-4e57-a76b-b1cc3c704495",
+    name: "Polo T-shirt (black)",
+    price: 500,
+    promoCode: "JAN10",
+    promoActive: true,
+    discount: .1,
+    image: "https://source.unsplash.com/200x200/daily/?product,shirt",
+  },
+  {
+    id: "f5ecd4b9-0557-42c0-942e-a85a6c59318a",
+    department_id: "14f7f80d-c9dd-4e57-a76b-b1cc3c704495",
+    name: "Casio digital watch",
+    price: 500,
+    promoCode: "JAN10",
+    promoActive: true,
+    discount: .1,
+    image: "https://source.unsplash.com/200x200/daily/?product,watch",
   },
 ];
 

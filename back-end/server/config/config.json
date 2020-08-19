@@ -1,0 +1,13 @@
+{
+  "development": {
+    "url": "postgres://nmoidwjk:2YQmz-1D3_4tdtKLjbricnQ2oOEOWjPg@kandula.db.elephantsql.com:5432/nmoidwjk"
+  },
+  "test": {
+    "username": "nmoidwjk",
+    "password": "2YQmz-1D3_4tdtKLjbricnQ2oOEOWjPg",
+    "database": "nmoidwjk",
+    "host": "kandula.db.elephantsql.com:",
+    "port": 5432,
+    "dialect": "postgres"
+  }
+}

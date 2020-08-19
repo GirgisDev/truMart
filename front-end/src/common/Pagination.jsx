@@ -27,7 +27,7 @@ const PaginationNumber = styled.div`
   }
 `;
 
-const Pagination = ({ totalItems, itemsPerPage = 10, paginateFN }) => {
+const Pagination = ({ currentPageNum, totalItems, itemsPerPage = 12, paginateFN }) => {
   const [pageNumber, setPageNumber] = useState(0);
   const [totalPages, setTotalPages] = useState(0);
   const [countList, setCountList] = useState([]);
@@ -58,13 +58,14 @@ const Pagination = ({ totalItems, itemsPerPage = 10, paginateFN }) => {
 
   const paginate = number => {
     if (number === pageNumber) return;
-    setPageNumber(number);
     paginateFN(number)
+    setPageNumber(number);
     setPages();
   }
-
+  
   useEffect(() => {
     if (!countList.length) setPages();
+    setPageNumber(currentPageNum || 0);
   })
 
   return (

@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import App from './components/App';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import middlewares from './middlewares';
-import reducers from './reducers';
+import middlewares from './store/middlewares';
+import reducers from './store/reducers';
 
 const store = createStore(reducers, middlewares);
 

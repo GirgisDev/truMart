@@ -10,7 +10,7 @@ const DepartmentsContainer = styled.div`
   top: 0;
 `;
 
-const DepartmentsHeader = styled.h5`
+const DepartmentsHeader = styled.h4`
   margin-top: 0;
 `;
 
@@ -24,15 +24,24 @@ const DepartmentItem = styled.li`
   &:hover {
     text-decoration: underline;
   }
+  &.active-department {
+    font-weight: bold;
+  }
 `;
 
-const Departments = ({ departments }) => {
+const Departments = ({ departments, currentDepartment, filterDepartment }) => {
   return (
     <DepartmentsContainer>
       <ul>
         <DepartmentsHeader>Departments</DepartmentsHeader>
+        <DepartmentItem 
+          className={`${!currentDepartment ? 'active-department' : ''}`}
+          onClick={() => filterDepartment(null)}>All departments</DepartmentItem>
         {departments.map(department => (
-          <DepartmentItem key={department.id}>{ department.name }</DepartmentItem>
+          <DepartmentItem 
+            key={department.id}
+            className={`${currentDepartment === department.id ? 'active-department' : ''}`}
+            onClick={() => filterDepartment(department.id)}>{ department.name }</DepartmentItem>
         ))}
       </ul>
     </DepartmentsContainer>

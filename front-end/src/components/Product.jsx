@@ -12,13 +12,12 @@ const ProductImg = styled.img`
   width: 100%;
   height: 260px;
   border-radius: 8px;
-  box-shadow: 1px 2px 8px 0px #878787;
 `;
 
 const ProductPrice = styled.p`
   margin-left: 20px;
   font-weight: bold;
-  `;
+`;
   
 const ProductPromo= styled.div`
   margin-left: 20px;

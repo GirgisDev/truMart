@@ -5,6 +5,7 @@ import Departments from './Departments';
 import Product from './Product';
 import Pagination from './../common/Pagination';
 import { getProducts } from '../store/actions/products.action';
+import ProductsCount from './ProductsCount';
 
 const ProductsContainer = styled.div`
   display: flex;
@@ -12,11 +13,6 @@ const ProductsContainer = styled.div`
   width: 80%;
   margin: 20px auto;
 `;
-const ProductsCount = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  `;
 const ProductsListContainer = styled.div`
   display: flex;
   flex-direction: row;
@@ -47,20 +43,19 @@ const Products = ({ loading, products, productsCount, dispatch }) => {
     setCurrentPageNum(pageNum);
     dispatch(getProducts({ pageNum, departmentId: currentDepartment }));
   }
-
+  
   const filterDepartment = departmentId => {
+    setCurrentPageNum(0);
     setCurrentDepartment(departmentId);
-    dispatch(getProducts({ departmentId, pageNum: currentPageNum }));
+    dispatch(getProducts({ departmentId, pageNum: 0 }));
   }
 
   return (
     <ProductsContainer>
-      <ProductsCount>
-        {products.length ? (
-          <div>{currentPageNum * 12 + 1} - {currentPageNum * 12 + products.length} of {productsCount} products</div>
-        ) : <div>0 products</div>}
-        <div className="_separator"></div>
-      </ProductsCount>
+      <ProductsCount
+        currentPageNum={currentPageNum}
+        products={products}
+        productsCount={productsCount} />
 
       <ProductsListContainer>
         <DepartmentsContainer>
@@ -78,9 +73,7 @@ const Products = ({ loading, products, productsCount, dispatch }) => {
             ))}
           </ProductsList>
         ) : (
-          <NoContent>
-            No Products to be shown, try differnet filters.
-          </NoContent>
+          <NoContent>No Products to be shown, try differnet filters.</NoContent>
         )}
       </ProductsListContainer>
       

@@ -57,6 +57,10 @@ const Navbar = ({ dispatch }) => {
     dispatch(getProducts({ searchKeyword }))
   }
 
+  const handleEnterPress = e => {
+    if (e.key === 'Enter') searchProducts();
+  }
+
   return (
     <Nav>
       <NavBrand href="#">TruMart</NavBrand>
@@ -65,7 +69,8 @@ const Navbar = ({ dispatch }) => {
           type="text" 
           placeholder="Search" 
           aria-label="Search"
-          onInput={e => setSearchKeyword(e.target.value)} />
+          onInput={e => setSearchKeyword(e.target.value)}
+          onKeyUp={handleEnterPress} />
         <SearchBtn onClick={searchProducts}>Search</SearchBtn>
       </SearchContainer>
     </Nav>
